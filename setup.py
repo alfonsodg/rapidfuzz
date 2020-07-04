@@ -14,7 +14,7 @@ with open(path.join(this_dir, 'README.md'), encoding='utf-8') as f:
 class BuildExt(build_ext):
     """A custom build extension for adding compiler-specific options."""
     c_opts = {
-        'msvc': ['/EHsc', '/O2', '/std:c++14'],
+        'msvc': ['/EHsc', '/Mt', '/O2', '/std:c++14'],
         'unix': ['-O3', '-std=c++14'],
     }
     l_opts = {
